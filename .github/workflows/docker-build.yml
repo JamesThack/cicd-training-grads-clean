@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Say hello
-        run: echo "Hello ${{ github.actor }}! "
+        run: echo "Hello ${{ github.actor }}! brbr"
       - name: Build Docker image
         run: docker build -t cicd-training-2026 .
     
