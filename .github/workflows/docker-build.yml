@@ -8,9 +8,12 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Say hello
         run: echo "Hello ${{ github.actor }}! brbr"
       - name: Build Docker image
         run: docker build -t cicd-training-2026 .
-    
+      - name: Create Release
+        id: create_release
+        uses: comnoco/create-release@v2
