@@ -1,0 +1,16 @@
+name: 2 - Docker Build
+
+# Run manually from the Actions tab ("Run workflow" button)
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Say hello
+        run: echo "Hello ${{ github.actor }}! brbr"
+      - name: Build Docker image
+        run: docker build -t cicd-training-2026 .
+    
