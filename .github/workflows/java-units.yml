@@ -12,6 +12,6 @@ jobs:
       - uses: actions/setup-java@v6
         with:
           distribution: temurin
-          java-version-file: .java-version
+          java-version: '25'
       - run: java --version
       - run: mvn -B test 
